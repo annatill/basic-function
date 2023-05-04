@@ -3,7 +3,15 @@ import {
   StatisticText,
   StatisticCounter,
 } from './StatisticItem.styled';
-
-export const StatisticItem = () => {
-  return <div>StatisticBox</div>;
+import { IconContext } from 'react-icons';
+export const StatisticItem = ({ total, title, icon }) => {
+  return (
+    <StatisticBox>
+      <IconContext.Provider value={{ size: '60px' }}>
+        {icon}
+      </IconContext.Provider>
+      <StatisticCounter>{total}</StatisticCounter>
+      <StatisticText>{title}</StatisticText>
+    </StatisticBox>
+  );
 };
