@@ -7,10 +7,10 @@ import {
   ForbesList,
   CryptoHistory,
 } from 'components';
-
+import forbes from 'data/forbes.json';
 import article from 'data/article.json';
 import data from 'data/data.json';
-console.log('data->', data);
+
 
 export const App = () => {
   return (
@@ -28,16 +28,14 @@ export const App = () => {
           avatar={article.avatar}
           postedAt={article.postedAt}
         />
-
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 2
         </Heading>
         <Statistics title="Main Statistics" stats={data} />
-
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 3
         </Heading>
-        <ForbesList />
+        <ForbesList list={forbes} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 4
